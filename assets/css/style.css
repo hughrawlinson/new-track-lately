@@ -1,0 +1,19 @@
+#loggedIn{
+	display:none;
+}
+#friendsList{
+	margin:0px;
+	max-height:336px;
+	overflow-y:scroll;
+}
+#friendsList li{
+	list-style:none;
+	margin-left:0px;
+	color:#2980B9;
+}
+.friendsListLiOver{
+	color:#3498DB !important;
+	margin-left:3px !important;
+	text-decoration:underline;
+	cursor:pointer;
+}

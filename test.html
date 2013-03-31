@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+  <html class='no-js lt-ie9 lt-ie8 lt-ie7' lang='en'></html>
+<![endif]-->
+<!--[if IE 7]>
+  <html class='no-js lt-ie9 lt-ie8' lang='en'></html>
+<![endif]-->
+<!--[if IE 8]>
+  <html class='no-js lt-ie9' lang='en'></html>
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class='no-js' lang='en'>
+  <!--<![endif]-->
+  <head>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+    <title>New track lately? Check out your friends' music!</title>
+    <meta content='' name='description' />
+    <meta content='width=device-width' name='viewport' />
+    <link href='assets/css/style.css' rel='stylesheet' />
+    <link href='assets/css/bootstrap.min.css' rel='stylesheet' />
+    <link href='assets/css/flat-ui.css' rel='stylesheet' />
+    <link href='assets/css/introjs-ie.min.css' rel='stylesheet' />
+    <link href='assets/css/introjs.min.css' rel='stylesheet' />
+    <link rel="apple-touch-icon" href="touch-icon-precomposed.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="touch-icon-72x72-precomposed.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="touch-icon-iphone-114x114-precomposed.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="touch-icon-144x144-precomposed.png" />
+    <script src='assets/js/modernizr-2.5.3.min.js'></script>
+    <!--
+      facebook open graph content
+    -->
+    <meta content='http://codeoclock.net/newtracklately' name='og:url' />
+    <meta content='New Track Lately' name='og:title' />
+    <meta content='Listen to your friends music!' name='og:description' />
+    <meta content='website' name='og:type' />
+    <meta content='http://www.codeoclock.net/newtracklately/ntl.png' name='og:image' />
+    <meta content="Code O'Clock Multinational Conglomorate" name='og:site_name' />
+    <!--
+      twitter card
+    -->
+    <meta content='summary' name='twitter:card' />
+    <meta content='http://codeoclock.net/newtracklately' name='twitter:url' />
+    <meta content='New Track Lately' name='twitter:title' />
+    <meta content='Listen to your friends music!' name='twitter:description' />
+    <meta content='http://www.codeoclock.net/newtracklately/ntl.png' name='twitter:image' />
+    <meta content="@hughrawlinson" name='twitter:creator' />
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="#">New Track Lately</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right">
+                        <li><a href="" onclick="facebookLogin();">Sign in with Facebook</a></li>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="hero-unit">
+                <h1 id="title">New Track Lately</h1>
+                <p>Wanna see what your friends have been listening to lately? Log in with Facebook!</p>
+            </div>
+            
+            <div id="social" class="row">
+                <div class="span1">
+                    <input type="checkbox" id="share" checked> Share to Facebook?</input>
+                </div>
+                <div class="span1">
+                    <div class="fb-like" data-href="http://codeoclock.net/newtracklately" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+                </div>
+                <div class="span1">
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.codeoclock.net/newtracklately/">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </div>
+                <div class="span1">
+                    <script type="text/javascript" src="http://www.reddit.com/static/button/button1.js"></script>
+                </div>
+            </div>
+
+            <div id="loggedIn" style="display:block!important;" class="row">
+                <div id="friends" class="span4 offset2">
+                    <h2>Friends</h2>
+                        <div id="friends-list">
+    <input type="text" value="" placeholder="Search..." class="search">
+    <button class="btn btn-primary sort" data-sort="name">Sort by name</button>
+    <ul id="friendsList" class="list">
+    	<li id="568135775"><span class="name">Kevin Hayes</span></li>
+		<li id="576286302"><span class="name">Steffan Gough</span></li>
+		<li id="625381650"><span class="name">Sam Maryon</span></li>
+		<li id="579053824"><span class="name">Ike Victor</span></li>
+		<li id="577467546"><span class="name">Felix Clary Weatherall</span></li>
+		<li id="564660505" class=""><span class="name">Alyssa Nicia Garrido Fortunato</span></li>
+		<li id="517260173" class=""><span class="name">Cillian Dudley</span></li>
+		<li id="518053271" class=""><span class="name">Nancy Van Der Kennilstein</span></li>
+		<li id="515748173" class=""><span class="name">Sayori Radda</span></li>
+		<li id="506125590" class=""><span class="name">Nathan Caleb Sword</span></li>
+		<li id="527995577" class=""><span class="name">Harry W. Soolia</span></li>
+		<li id="509910733" class=""><span class="name">Noor Hyder</span></li>
+		<li id="655089373" class=""><span class="name">Nevo Segal</span></li>
+		<li id="633315010" class=""><span class="name">Andrew Johnson</span></li>
+		<li id="512892262"><span class="name">Matt Nicholls</span></li>
+		<li id="531772337" class=""><span class="name">Kirsty Emma Simms</span></li>
+		<li id="512844177"><span class="name">Clair Archbold</span></li>
+		<li id="693560023" class=""><span class="name">Hannah Sabil Liechty</span></li>
+		<li id="578120537"><span class="name">Glyn Darcy Rive</span></li>
+		<li id="541348081" class=""><span class="name">Terence Broad</span></li>
+		<li id="560959535"><span class="name">Daniel Parkin</span></li>
+		<li id="542725118" class=""><span class="name">Mickey Portlock</span></li>
+		<li id="540891346"><span class="name">Rami Abukalam</span></li>
+		<li id="534020643" class=""><span class="name">Danny Herman</span></li>
+		<li id="568641338"><span class="name">Nadine Elizabeth</span></li>
+		<li id="592193141"><span class="name">Hande Kazdal</span></li>
+		<li id="586555330"><span class="name">Ahmed Al Kindy</span></li>
+		<li id="583391994"><span class="name">Max Thompson</span></li>
+		<li id="603310552"><span class="name">Barty Shepherd</span></li>
+		<li id="602952384"><span class="name">Fergus O'Farrell</span></li>
+		<li id="572281332"><span class="name">Alex Pithie</span></li>
+		<li id="755048224" class=""><span class="name">Timothée Bolzon</span></li>
+		<li id="618835855"><span class="name">Tara Finnegan</span></li>
+		<li id="609704784"><span class="name">Charlotte Amrouche</span></li>
+		<li id="752243516"><span class="name">Lia O'Brien</span></li>
+		<li id="635008027"><span class="name">Stevie Halliday</span></li>
+		<li id="616014402"><span class="name">Padraigh Perkins-Edge</span></li>
+		<li id="894805472"><span class="name">Rich Cahill</span></li>
+		<li id="644960837" class=""><span class="name">Melissa Robinson</span></li>
+		<li id="643920793"><span class="name">Christina Constantinou</span></li>
+		<li id="729735577"><span class="name">Laylla Azarbyjani</span></li>
+		<li id="755146093"><span class="name">Sam McAtominey</span></li>
+		<li id="641165113"><span class="name">Kieren Hennessy</span></li>
+		<li id="648550596"><span class="name">Moe Elmasry</span></li>
+		<li id="660195058"><span class="name">Martynas Jocevicius</span></li>
+		<li id="832700595" class=""><span class="name">Andreea Pintea</span></li>
+		<li id="679772804" class=""><span class="name">Simon O'Shea</span></li>
+		<li id="687392115" class=""><span class="name">Thara Ali</span></li>
+		<li id="743365525" class=""><span class="name">Ciara Aherne</span></li>
+		<li id="644785686" class=""><span class="name">Liam Higgins</span></li>
+		<li id="697601298" class=""><span class="name">Bill Hamilton</span></li>
+		<li id="1117644916" class=""><span class="name">Arthur Pawsey</span></li>
+		<li id="710131354" class=""><span class="name">Mitch Carr</span></li>
+		<li id="1254795948" class=""><span class="name">Suzie Rawlinson</span></li>
+		<li id="722395651" class=""><span class="name">Hugh Aynsley</span></li>
+		<li id="712312228"><span class="name">Shaurav Ghosh</span></li>
+		<li id="716880307"><span class="name">Ananya Sharma</span></li>
+		<li id="753202353"><span class="name">Peter Jr Idoko</span></li>
+		<li id="766060006"><span class="name">Dan Proxy</span></li>
+		<li id="710735927"><span class="name">Shea O'Connell</span></li>
+		<li id="820020553"><span class="name">Sinead Wall</span></li>
+		<li id="878190155"><span class="name">Roberto Matteo Floris</span></li>
+		<li id="901675723"><span class="name">Katie Lockhart</span></li>
+		<li id="848300393"><span class="name">Sam Hatchwell</span></li>
+		<li id="1643320281"><span class="name">Conor Higgins</span></li>
+		<li id="1057755157"><span class="name">Lou Briséïs Pichon</span></li>
+		<li id="846000243"><span class="name">Karan Aurora</span></li>
+		<li id="1044564372"><span class="name">Joao Miguel Marufo</span></li>
+		<li id="840085456"><span class="name">Emma Chalkley</span></li>
+		<li id="1575142818"><span class="name">Lawrence Ian Hintermayr</span></li>
+		<li id="1019341504"><span class="name">Gideon Slayen</span></li>
+		<li id="893165526"><span class="name">Margarita Stephen</span></li>
+		<li id="1053875221"><span class="name">Joe Posnett</span></li>
+		<li id="1044180168"><span class="name">Gabriel Ross</span></li>
+		<li id="892540592"><span class="name">Ruairí Melvin</span></li>
+		<li id="1763362443"><span class="name">Karen Bryan</span></li>
+		<li id="1157387890"><span class="name">Agnese Gustaite</span></li>
+		<li id="1313670414"><span class="name">Jakub Fiala</span></li>
+		<li id="1117535172"><span class="name">Becca Carter</span></li>
+		<li id="1202976497"><span class="name">Eimear Walsh</span></li>
+		<li id="1401677235"><span class="name">Richard Harrison</span></li>
+		<li id="1017886499"><span class="name">Burt Williamson</span></li>
+		<li id="1222188935"><span class="name">Danny Nasr</span></li>
+		<li id="1306647366"><span class="name">Connor Lynch</span></li>
+		<li id="1304593449"><span class="name">Michael Walsh</span></li>
+		<li id="1190783405"><span class="name">Mateus Mollet</span></li>
+		<li id="1307559629"><span class="name">Yasmeen Mimi Brahim</span></li>
+		<li id="1476250201"><span class="name">Matthew Smith</span></li>
+		<li id="1335902690"><span class="name">Charlie Wolters</span></li>
+		<li id="1462177403"><span class="name">Ben Forse</span></li>
+		<li id="1546523185"><span class="name">Shauna Butler</span></li>
+		<li id="1454018564"><span class="name">Ben Goldstone</span></li>
+		<li id="1490914981"><span class="name">Edward Damn</span></li>
+		<li id="100001901444971"><span class="name">Ilia Higgs</span></li>
+		<li id="100000358867554"><span class="name">Robert Davidson</span></li>
+		<li id="100000260428165"><span class="name">Gary Kelly</span></li>
+		<li id="100000513391767"><span class="name">Eli-Lilly Woke</span></li>
+		<li id="100000774864086"><span class="name">David Shanahan</span></li>
+		<li id="100001745287779"><span class="name">Shóna Carey</span></li>
+		<li id="100002427205791"><span class="name">Paulomee Neog</span></li>
+		<li id="100001464996982"><span class="name">Eric Visschedijk</span></li>
+		<li id="1397861148"><span class="name">Alec McGregor</span></li>
+		<li id="1359098516"><span class="name">Simone Mascher</span></li>
+		<li id="100002948811084"><span class="name">Jack Stevens</span></li>
+		<li id="1509582644"><span class="name">Ben Lacey</span></li>
+	</ul>
+</div>
+</div>
+                <div class="span5">
+                    <h2 id="friendName"></h2>
+                    <h4 id="songName"></h4>
+                    <div id="player"></div>
+               </div>
+            </div>
+
+            <hr>
+
+            <footer>
+                <p>&copy; Code O'Clock 2013</p>
+            </footer>
+
+        </div> <!-- /container -->
+    <script src="http://toma.hk/api.js?v=1"></script>
+    <script src="assets/js/jquery-1.9.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/intro.min.js"></script>
+    <script src="assets/js/list.min.js"></script>
+    <script src='assets/js/plugins.js'></script>
+    <script>
+    var options = {
+                valueNames: [ 'name' ]
+            };
+
+            var featureList = new List('friends-list', options);
+    </script>
+    <script type='text/javascript'>
+      //<![CDATA[
+        var _gaq=[['_setAccount','UA-28943414-2'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+      //]]>
+    </script>
+  </body>
+</html>

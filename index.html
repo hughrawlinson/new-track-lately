@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+  <html class='no-js lt-ie9 lt-ie8 lt-ie7' lang='en'></html>
+<![endif]-->
+<!--[if IE 7]>
+  <html class='no-js lt-ie9 lt-ie8' lang='en'></html>
+<![endif]-->
+<!--[if IE 8]>
+  <html class='no-js lt-ie9' lang='en'></html>
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class='no-js' lang='en'>
+  <!--<![endif]-->
+  <head>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+    <title>New track lately? Check out your friends' music!</title>
+    <meta content='' name='description' />
+    <meta content='width=device-width' name='viewport' />
+    <link href='assets/css/style.css' rel='stylesheet' />
+    <link href='assets/css/bootstrap.min.css' rel='stylesheet' />
+    <link href='assets/css/flat-ui.css' rel='stylesheet' />
+    <link href='assets/css/introjs-ie.min.css' rel='stylesheet' />
+    <link href='assets/css/introjs.min.css' rel='stylesheet' />
+    <link rel="apple-touch-icon" href="touch-icon-precomposed.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="touch-icon-72x72-precomposed.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="touch-icon-iphone-114x114-precomposed.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="touch-icon-144x144-precomposed.png" />
+    <script src='assets/js/modernizr-2.5.3.min.js'></script>
+    <!--
+      facebook open graph content
+    -->
+    <meta content='http://codeoclock.net/newtracklately' name='og:url' />
+    <meta content='New Track Lately' name='og:title' />
+    <meta content='Listen to your friends music!' name='og:description' />
+    <meta content='website' name='og:type' />
+    <meta content='http://www.codeoclock.net/newtracklately/ntl.png' name='og:image' />
+    <meta content="Code O'Clock Multinational Conglomorate" name='og:site_name' />
+    <!--
+      twitter card
+    -->
+    <meta content='summary' name='twitter:card' />
+    <meta content='http://codeoclock.net/newtracklately' name='twitter:url' />
+    <meta content='New Track Lately' name='twitter:title' />
+    <meta content='Listen to your friends music!' name='twitter:description' />
+    <meta content='http://www.codeoclock.net/newtracklately/ntl.png' name='twitter:image' />
+    <meta content="@hughrawlinson" name='twitter:creator' />
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="#">New Track Lately</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right">
+                        <li><a href="" onclick="facebookLogin();">Sign in with Facebook</a></li>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="hero-unit">
+                <h1 id="title">New Track Lately</h1>
+                <p>Wanna see what your friends have been listening to lately? Log in with Facebook!</p>
+            </div>
+            
+            <div id="social" class="row">
+                <div class="span1">
+                    <input type="checkbox" id="share" checked> Share to Facebook?</input>
+                </div>
+                <div class="span1">
+                    <div class="fb-like" data-href="http://codeoclock.net/newtracklately" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+                </div>
+                <div class="span1">
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.codeoclock.net/newtracklately/">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </div>
+                <div class="span1">
+                    <script type="text/javascript" src="http://www.reddit.com/static/button/button1.js"></script>
+                </div>
+            </div>
+
+            <div id="loggedIn" class="row">
+                <div id="friends" class="span4 offset2">
+                    <h2>Friends</h2>
+                    <div id="friends-list">
+                        <input type="text" value placeholder="Search..." class="search" />
+                        <button class="btn btn-primary sort" data-sort="name">Sort by name</button>
+                        <ul id="friendsList" class="list"></ul>
+                    </div>
+                </div>
+                <div class="span5">
+                    <h2 id="friendName"></h2>
+                    <h4 id="songName"></h4>
+                    <div id="player"></div>
+               </div>
+            </div>
+
+            <hr>
+
+            <footer>
+                <p>&copy; Code O'Clock 2013</p>
+            </footer>
+
+        </div> <!-- /container -->
+    <script src="http://toma.hk/api.js?v=1"></script>
+    <script src="assets/js/jquery-1.9.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/intro.min.js"></script>
+    <script src="assets/js/list.min.js"></script>
+    <script src='assets/js/plugins.js'></script>
+    <script src='assets/js/script.js'></script>
+    <script type='text/javascript'>
+      //<![CDATA[
+        var _gaq=[['_setAccount','UA-28943414-2'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+      //]]>
+    </script>
+  </body>
+</html>
