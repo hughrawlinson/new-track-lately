@@ -48,6 +48,7 @@ function populateFriends() {
                             };
 
                             var featureList = new List('friends-list', options);
+                            featureList.sort('name', { asc: true });
                           },3000);
                           timeout = false;
                         }
@@ -114,7 +115,7 @@ var facebookLogout = function() {
 window.fbAsyncInit = function() {
   // init the FB JS SDK
   FB.init({
-    appId: '134327086719273',
+    appId: '/*Insert your app id here*/',
     // App ID from the App Dashboard
     //channelUrl : '//WWW.YOUR_DOMAIN.COM/channel.html', // Channel File for x-domain communication
     status: true,
