@@ -19,10 +19,7 @@
     <meta content='' name='description' />
     <meta content='width=device-width' name='viewport' />
     <link href='assets/css/style.css' rel='stylesheet' />
-    <link href='assets/css/bootstrap.min.css' rel='stylesheet' />
-    <link href='assets/css/flat-ui.css' rel='stylesheet' />
-    <link href='assets/css/introjs-ie.min.css' rel='stylesheet' />
-    <link href='assets/css/introjs.min.css' rel='stylesheet' />
+    <link href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css' rel='stylesheet' />
     <link rel="apple-touch-icon" href="touch-icon-precomposed.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="touch-icon-72x72-precomposed.png" />
     <link rel="apple-touch-icon" sizes="114x114" href="touch-icon-iphone-114x114-precomposed.png" />
@@ -49,47 +46,36 @@
   </head>
   <body>
     <div id="fb-root"></div>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
-                    <a class="brand" href="#">New Track Lately</a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav pull-right">
-                        <li><a href="" onclick="facebookLogin();">Sign in with Facebook</a></li>
-                    </div><!--/.nav-collapse -->
-                </div>
-            </div>
-        </div>
 
         <div class="container">
-            <div class="hero-unit">
-                <h1 id="title">New Track Lately</h1>
-                <p>Wanna see what your friends have been listening to lately? Log in with Facebook!</p>
+            <div class="header">
+                <h1>New Track Lately</h1>
+                <hr>
+            </div>
+            <div class="jumbotron">
+                <p>Wanna see what your friends have been listening to lately?</p>
+                <button class="btn btn-primary btn-large" onclick="facebookLogin();">Log in to Facebook!</button>
             </div>
             
             <div id="social" class="row">
-                <div class="span1">
+                <hr>
+                <div class="col-sm-2">
                     <input type="checkbox" id="share" checked> Share to Facebook?</input>
                 </div>
-                <div class="span1">
+                <div class="col-sm-1">
                     <div class="fb-like" data-href="http://codeoclock.net/newtracklately" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
                 </div>
-                <div class="span1">
+                <div class="col-sm-1">
                     <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.codeoclock.net/newtracklately/">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                 </div>
-                <div class="span1">
+                <div class="col-sm-1">
                     <script type="text/javascript" src="http://www.reddit.com/static/button/button1.js"></script>
                 </div>
             </div>
 
             <div id="loggedIn" class="row">
-                <div id="friends" class="span4 offset2">
+                <div id="friends" class="col-sm-4 col-sm-offset2">
                     <h2>Friends</h2>
                     <div id="friends-list">
                         <input type="text" value placeholder="Search..." class="search" />
@@ -97,7 +83,7 @@
                         <ul id="friendsList" class="list"></ul>
                     </div>
                 </div>
-                <div class="span5">
+                <div class="col-sm-5">
                     <h2 id="friendName"></h2>
                     <h4 id="songName"></h4>
                     <div id="player"></div>
@@ -107,14 +93,13 @@
             <hr>
 
             <footer>
-                <p>&copy; Code O'Clock 2013</p>
+                <p>made with &lt;3 by <a href="http://hughrawlinson.me/">Hugh Rawlinson</a></p>
             </footer>
 
         </div> <!-- /container -->
     <script src="http://toma.hk/api.js?v=1"></script>
     <script src="assets/js/jquery-1.9.1.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/intro.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script src="assets/js/list.min.js"></script>
     <script src='assets/js/plugins.js'></script>
     <script src='assets/js/script.js'></script>
