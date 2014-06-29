@@ -115,7 +115,7 @@ var facebookLogout = function() {
 window.fbAsyncInit = function() {
   // init the FB JS SDK
   FB.init({
-    appId: '/*Insert your app id here*/',
+    appId: '341862115846576',
     // App ID from the App Dashboard
     //channelUrl : '//WWW.YOUR_DOMAIN.COM/channel.html', // Channel File for x-domain communication
     status: true,
